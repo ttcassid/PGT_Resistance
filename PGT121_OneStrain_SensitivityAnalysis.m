@@ -1,11 +1,6 @@
 % BnABSensitivityAnalysis script
 close all
 clear all
-%% Model generic parameters
-PA.dT = 0.01;
-PA.f = 0.05;
-PA.dV = 23;
-InitialViralLoad = [55700,0,21040,23930,9660,0,2670,0,44800,190,180,750,350];
 %% Load PK parameters
 PopulationPKParametersStruct = load('PatientPKParameters_PopulationFit_03Jul23.mat');
 PatientPKParameters = cell2mat(struct2cell(PopulationPKParametersStruct));
@@ -16,6 +11,12 @@ VectorDoseSize = cell2mat(struct2cell(PopulationDoseSize));
 %% Load the VL parameters for single strain model
 PopulationVLParametersStructOneStrainMutation = load('OneStrainFittingResults4Jul2023.mat'); 
 PatientVLParametersOneStrain = cell2mat(struct2cell(PopulationVLParametersStructOneStrainMutation)); 
+
+%% Model generic parameters
+PA.dT = 0.01;
+PA.f = 0.05;
+PA.dV = 23;
+InitialViralLoad = [55700,0,21040,23930,9660,0,2670,0,17570,190,180,750,350];
 
 %% Initialize storage
 ParameterNames = {'omega' 'p'  'alpha' 'tau'}; %    %The name of parameters to be tested

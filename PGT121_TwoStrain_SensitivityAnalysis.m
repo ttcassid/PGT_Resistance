@@ -22,7 +22,7 @@ PopulationVLParametersStructTwoStrainMutation = load('TwoStrainFittingResults4Ju
 PatientVLParametersTwoStrain = cell2mat(struct2cell(PopulationVLParametersStructTwoStrainMutation));
 PA.mu =  0 ;
 
-InitialViralLoad = [55700,0,21040,23930,9660,0,2670,0,44800,190,180,750,350];
+InitialViralLoad = [55700,0,21040,23930,9660,0,2670,0,17570,190,180,750,350];
 PatientIndexVec =   [1,3:5,7,9:13];
 %% Initialize storage
 ParameterNames = {'omega' 'p'  'alphaS' 'tau' 'rho' 'alphaR'};   %The name of parameters to be tested
